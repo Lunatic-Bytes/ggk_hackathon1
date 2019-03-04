@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+button1
+{
+  background-color: #333;
+  border: none;
+  color: #F55D3D;
+  padding: 10px 30px;
+  text-align: center;
+  font-size:30px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 36px;
+}
+.buying
+{
+  font-size:30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.land
+{
+  font-size:1.4em;
+  padding: 0px 16px;
+}
+.navbar 
+{
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar a 
+{
+  float: left;
+  font-size: 20px;
+  color: #F55D3D;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+}
+.navbar a:hover, .dropdown:hover,  .button1:hover
+{
+  background-color: white ;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 50rem;
+    border-radius: 0.5rem;
+}
+.close-button {
+   padding:2px 2px;
+    float: right;
+    width:2em;
+    line-height: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.6rem;
+    background-color: white;
+}
+.close-button:hover
+{
+    background-color: #F55D3D;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+</style>
+</head>
+<body>
+<div class="navbar">
+   <a href="LPS.html"><i class="fa fa-fw fa-home"></i> <b>Home</b></a>
+   <a href="Contact.html"><i class="fa fa-fw fa-envelope"></i> <b>Contact</b></a>
+   <div class="land">
+     <p style="color:white" align=right><b>LANDS&nbsp;</b></p></div>
+   </div>
+</div>
+</br></br>
+</br></br>
+</br></br>
+</br></br>
+</br></br>
+<div class="buying">
+    <center><h1><b>BUYING</b></h1></center>
+</div>
+<center><button style="background-color: #333;border: none;color: #F55D3D;padding: 10px 30px;text-align: center;font-size:30px;text-decoration: none;display: inline-block;margin: 4px 2px;cursor: pointer;border-radius: 36px;" class="trigger"><b>Guidelines</b></button></center>
+<div class="modal">
+    <div class="modal-content">
+        <span class="close-button"><b>X</b></span>
+        <p style="font-size:20px"><a href="FBL.html"><b>FORESIGHTS FOR BUYING LANDS</b></a></p>
+    <p style="font-size:20px"><a href="PRORL.html"><b>BASIC PREREQUISITES YOU NEED TO HAVE BEFORE PROCEEDING TO REGISTRATION</b></a></p>
+    <p style="font-size:20px"><a href="PORL.html"><b>PROCESS OF REGISTRATION</b></a></p><p style="font-size:20px"><a href="MM.html"><b>MRO OFFICES AND MUNICIPAL OFFICES NEAR YOU</b></a></p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="LFiltersearch.html"><button id="next" type="submit" style="background-color: #333;
+  border: none;
+  color: #F55D3D;
+  padding: 10px 30px;
+  text-align: center;
+  font-size:15px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1px 2px;
+  cursor: pointer;
+  border-radius: 1000px;"><b>SKIP>>></b></button></a>
+    </div>
+</div>
+<script>
+var modal = document.querySelector(".modal");
+var trigger = document.querySelector(".trigger");
+var closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.trigger === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
+</script>
+</body>
+</html>
+
